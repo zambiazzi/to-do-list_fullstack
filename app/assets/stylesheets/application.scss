@@ -1,0 +1,169 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --dark-gray: #252422;
+    --light-gray: #403d39;
+    --red: #ca2124;
+    --green: #9ef01a;
+    --white: #ffffff;
+    --black: #000000;
+    --orange: #fb6107;
+    --odd-row-table-color: #39343B;
+    --even-row-table-color: #3C373E;
+    --table-font-color: #a0a0a0;
+    --btn-bg-modal-color: #4f772d;
+}
+
+body {
+    background-color: var(--dark-gray);
+    color: var(--white);
+    font-family: "Mona Sans", sans-serif;
+}
+
+@media screen and (max-width: 992px) {
+    .container {
+        min-width: 100%;
+        max-height: auto;
+    }
+}
+
+.create-button {
+    background-color: var(--green);
+    color: var(--dark-gray);
+}
+
+.create-button:hover {
+    background-color: var(--light-gray);
+    color: var(--green);
+}
+
+.table { 
+    --bs-table-border-color: transparent;
+}
+
+.table thead {
+    --bs-table-color: var(--white);
+}
+
+.table td {
+    --bs-table-color: var(--table-font-color) !important;
+    --bs-table-color-type: var(--table-font-color) !important;
+    word-break: break-word;
+    transition: 0.2s ease-in-out;
+}
+
+.table tr {
+    --bs-table-bg: var(--odd-row-table-color);
+    --bs-table-accent-bg: var(--even-row-table-color);
+    --bs-table-striped-bg: transparent;
+    --bs-table-hover-color: var(--white);
+    font-size: 13px;
+}
+
+.edit-button {
+    background-color: var(--light-gray);
+    color: var(--white);
+    width: 30px;
+    height: 30px;
+}
+
+.delete-button {
+    background-color: var(--red);
+    color: var(--white);
+    width: 30px;
+    height: 30px;
+}
+
+.button-index {
+    background-color: transparent;
+    border: none;
+}
+
+.error-message-box {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-block {
+    background-color: var(--light-gray);
+    height: 40px;
+}
+
+/* Modals */
+
+.form-control {
+    background-color: var(--light-gray);
+    color: var(--white);
+    border: none;
+}
+
+.form-control:focus {
+    background-color: var(--light-gray);
+    color: var(--white);
+    outline: none;
+    box-shadow: none;
+}
+
+.btn-close {
+    --bs-btn-close-focus-shadow: none;
+}
+
+.form-floating > .form-control:focus ~ label::after, .form-floating > .form-control:not(:placeholder-shown) ~ label::after, .form-floating > .form-control-plaintext ~ label::after, .form-floating > .form-select ~ label::after {
+    background-color: transparent;
+}
+
+.form-floating > .form-control:focus ~ label, .form-floating > .form-control:not(:placeholder-shown) ~ label, .form-floating > .form-control-plaintext ~ label, .form-floating > .form-select ~ label {
+    color: var(--table-font-color);
+}
+
+.btn-form-custom {
+    background-color: var(--btn-bg-modal-color);
+    color: var(--white);
+}
+
+.btn-form-custom:hover {
+    background-color: var(--table-font-color);
+    color: var(--black);
+}
+
+.modal-header {
+    background-color: var(--green);
+    color: var(--dark-gray);
+    border: none;
+}
+
+.modal-body {
+    background-color: var(--dark-gray);
+}
+
+.form-select {
+    background-color: var(--light-gray);
+    border: none;
+    color: var(--white);
+}
+
+.form-select:focus {
+    outline: none;
+    box-shadow: none;
+}

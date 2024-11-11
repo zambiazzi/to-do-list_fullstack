@@ -1,0 +1,15 @@
+<%= form_with(model: model, url: url, method: method, local: true) do |f| %>
+  <div class="form-floating mb-3">
+    <%= f.text_field :name, class: "form-control", id: "floatingInputGrid", autocomplete: "off", required: true %>
+    <%= f.label :name, "Nome da Tarefa", for: "floatingInputGrid" %>
+  </div>
+
+  <div class="form-floating mb-3">
+    <%= f.select :status, @task_status.map { |option| [option.second, option.first] }, {}, class: "form-select", id: "floatingSelectGrid" %>
+    <%= f.label :status, "Status", for: "floatingSelectGrid" %>
+  </div>
+
+  <div class="d-flex justify-content-end">
+    <%= f.submit method.eql?(:post) ? 'Criar' : 'Salvar', class: "btn btn-form-custom" %>
+  </div>
+<% end %>

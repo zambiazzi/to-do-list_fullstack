@@ -1,0 +1,13 @@
+ <div class="modal fade" id="create-task-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Criar Tarefa</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <%= render partial: "tasks/shared/form", locals: { model: Task.new, url: url, method: :post } %>
+            </div>
+        </div>
+    </div>
+</div>
