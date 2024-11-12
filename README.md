@@ -2,7 +2,7 @@
 
 CRUD simples realizado com Ruby on Rails.
 
-![index picture](index-print.png)
+![project picture](/assets/nome_da_imagem.png)
 
 
 ## Pré-requisitos
