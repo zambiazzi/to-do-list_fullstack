@@ -1,24 +1,48 @@
-# README
+# to do list fullstack
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+CRUD simples realizado com Ruby on Rails.
 
-Things you may want to cover:
+![index picture](index-print.png)
 
-* Ruby version
 
-* System dependencies
+## Pré-requisitos
 
-* Configuration
+- [Ruby](https://www.ruby-lang.org) (versão 3.2.3)
+- [Rails](https://rubyonrails.org) (versão 6.1.7)
+- [Bundler](https://bundler.io)
+- [Node.js](https://nodejs.org) e [Yarn](https://yarnpkg.com) (para gerenciar pacotes JS)
+- [PostgreSQL](https://www.postgresql.org/download/)
 
-* Database creation
+## Como rodar o projeto localmente
 
-* Database initialization
+Siga esses passos para configurar o ambiente local.
 
-* How to run the test suite
+### 1. Clone o repositório
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+git clone https://github.com/zambiazzi/to-do-list_fullstack
+cd to-do-list_fullstack
+```
 
-* Deployment instructions
+### 2. Instale as dependências
+```
+bundle install
+yarn install
+```
 
-* ...
+### 3. Configure o banco de dados
+
+```
+rails db:create
+rails db:migrate
+```
+
+### 3. Inicie o servidor
+
+```
+rails s
+```
+
+<br>
+
+O projeto deve estar disponível em `http://localhost:3000`
